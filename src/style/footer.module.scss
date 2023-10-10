@@ -1,0 +1,107 @@
+.containerfluid {
+    background: #333;
+    .containerdiv {
+        padding: 80px 0px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+    .list_first_ul{
+        display: flex;
+        justify-content:space-around; 
+        flex-direction: row;
+    }
+        img {
+            color: white;
+        }
+    
+        ul {
+            list-style: none;
+    
+            .list_head {
+                margin-bottom: 27px;
+    
+            }
+    
+            .list_head span {
+                font-size: 22px;
+                letter-spacing: 0;
+                font-weight: 100;
+                color: white;
+                font-family: 'Helvetica-Regular';
+                line-height: 25px;
+    
+    
+            }
+    
+            li span {
+                color: white;
+                font-size: 17px;
+                line-height: 17px;
+                font-family: 'forma-djr-text';
+                font-weight: 400;
+    
+            }
+    
+            .paragraph {
+                width: 50%;
+                font-size: 16px;
+                font-family: 'Helvetica-Regular';
+                line-height: 22px;
+                letter-spacing: 0;
+                font-weight: 200;
+                color: #000000a8;
+            }
+    
+    
+        }
+    }
+    // box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    
+
+    .second_footer {
+        padding: 13px 0px ;
+        // background: #50A15E;
+        display: flex;
+        justify-content: space-between;
+
+        .firts_div {
+            display: flex;
+            justify-content:flex-start;
+            color: #fff;
+            font-family: 'Helvetica-Regular';
+            font-size: 14px;
+            letter-spacing: 0;
+            font-weight: 100;
+        }
+
+        .second_div {
+            display: flex;
+            justify-content:end;
+
+            p {
+                font-size: 14px;
+                letter-spacing: 0;
+                color: #fff;
+                font-family: 'Helvetica-Regular';
+                font-weight: 100;
+                margin: 0;
+                margin-right: 15px;
+            }
+            .ul_list{
+             
+                ul{
+                    list-style:none;
+                    display: flex;
+                    justify-content:space-around; 
+                    flex-direction: row;
+                    gap:10px;
+                }
+            }
+        }
+    }
+}
+
+
