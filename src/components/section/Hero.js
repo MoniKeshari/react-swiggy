@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "../../style/card.module.scss";
+import styles from "../../style/carousel.module.scss";
+
 import ShimmerComponent from "../shimmer/Shimmer";
 import CardComponent from "../cardcomponent/Card";
 import { base_url_card } from "../../utils/constants"
@@ -18,10 +20,13 @@ const HeroSection = () => {
     return (
         <>
             <div className="container-fluid mt-5">
-
+            <div className="container">
+                </div>
                 <div className="container mt-3">
-
-                    <CarouselComponent />
+                   <div className={styles.carousel_data_}>
+                   <CarouselComponent />
+                   </div>
+                   
 
                     {
                         apiResponse && apiResponse.length > 0 ?

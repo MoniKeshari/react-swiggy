@@ -4,8 +4,11 @@ const ButtonComponent = (props) => {
     const {label, buttonclassname, onClickHandler, searchClassName, searchIcon} = props;
   return (
     <>
-      <button className={buttonclassname} onClick={onClickHandler}>{label}</button>
-      <img src={searchIcon} alt="img" className={searchClassName}/>
+      <button className={buttonclassname} onClick={onClickHandler}>{label && label}
+      {searchClassName && (  <img src={searchIcon} alt="img" className={searchClassName}/>)}
+    
+      </button>
+   
     </>
   );
 };
