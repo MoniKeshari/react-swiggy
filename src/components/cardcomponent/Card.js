@@ -6,7 +6,7 @@ const CardComponent = ({
     cardImageTag,
     cardContentTag,
     cardContent,
-    data
+    data,
 }) => {
     const { imageId, accessibility, id } = data;
     return (
@@ -14,12 +14,8 @@ const CardComponent = ({
 
             <div className={`${cardWrapperClass}`} key={id}>
                 <div className={`${cardImageTag}`}>
-
                     <img src={`${base_url_img}/${imageId}`} alt="img" />
-
                 </div>
-
-
                 <div className={cardContentTag}>
                     <div className={cardContent}>{accessibility.altText}</div>
                 </div>

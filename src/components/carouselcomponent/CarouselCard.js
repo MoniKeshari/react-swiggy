@@ -16,3 +16,6 @@ const CarouselCard = ({ data }) => {
 }
 
 export default CarouselCard
+
+
+

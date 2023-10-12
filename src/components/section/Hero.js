@@ -6,6 +6,7 @@ import ShimmerComponent from "../shimmer/Shimmer";
 import CardComponent from "../cardcomponent/Card";
 import { base_url_card } from "../../utils/constants"
 import CarouselComponent from "../carouselcomponent/CarouselComponent";
+import CardCarouselComponent from "../carouselcomponent/CardCaraousel";
 const HeroSection = () => {
     const [apiResponse, setapiResponse] = useState([])
     useEffect(() => {
@@ -20,13 +21,17 @@ const HeroSection = () => {
     return (
         <>
             <div className="container-fluid mt-5">
-            <div className="container">
+                <div className="container">
                 </div>
                 <div className="container mt-3">
-                   <div className={styles.carousel_data_}>
-                   <CarouselComponent />
-                   </div>
-                   
+                    <div className={styles.carousel_data_}>
+                        <CarouselComponent />
+                    </div>
+
+
+                    <div className={styles.wrapper_card}>
+                        <CardCarouselComponent />
+                    </div>
 
                     {
                         apiResponse && apiResponse.length > 0 ?
@@ -34,7 +39,7 @@ const HeroSection = () => {
                                 <>
                                     <div className="row">
                                         {apiResponse[1]?.card?.card?.imageGridCards?.info?.map((item, index) => (
-                                            <div className="col-md-4 col-sm-12" key={index}>
+                                            <div className="col-md-3 col-sm-12" key={index}>
 
                                                 <CardComponent
                                                     key={item.id}
@@ -54,7 +59,6 @@ const HeroSection = () => {
 
                             :
                             <ShimmerComponent />}
-
 
                 </div>
             </div>

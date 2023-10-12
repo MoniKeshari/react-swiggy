@@ -25,22 +25,26 @@ const CarouselComponent = () => {
         }
     };
     return (
-      
-            <Carousel responsive={responsive}>
-                {data.map((item, index) => {
-                    return (
 
-                        <div key={index} className={styles.card_wrapper_data}>
-                            <CarouselCard key={item.id} data={item} />
-                        </div>
+        <Carousel
+            swipeable={true}
+            draggable={true}
+            responsive={responsive}
+            className={styles.carousel_card_}>
+            {data.map((item, index) => {
+                return (
 
-                    )
-                }
+                    <div key={index} className={styles.card_wrapper_data}>
+                        <CarouselCard key={item.id} data={item} />
+                    </div>
 
-                )}
+                )
+            }
 
-            </Carousel>
-     
+            )}
+
+        </Carousel>
+
 
 
 
