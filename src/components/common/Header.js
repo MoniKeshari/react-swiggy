@@ -5,6 +5,7 @@ import InputBaseField from "../customcomponent/Input";
 import searchIcon from "../../assets/productImg/search.png";
 import ButtonComponent from "../customcomponent/Button";
 // import ButtonComponent from "../customcomponent/Button";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -16,7 +17,7 @@ const NavBar = () => {
 
               <img src={imgheader} width={40} height={30} alt="" />
 
-              <div className={style.third_div}> Home</div>
+              <div className={style.third_div}>  <Link to="/"> Home</Link></div>
 
             </div>
             <div className={style.button_text}>
@@ -30,20 +31,25 @@ const NavBar = () => {
               </div>
               <div >
                 <ButtonComponent searchIcon={searchIcon}
-                  searchClassName={style.searchicon}  buttonclassname={style.button_custom_text}/>
+                  searchClassName={style.searchicon} buttonclassname={style.button_custom_text} />
               </div>
             </div>
 
             <div className={style.third_div}>
 
-
               <div>
 
-                Contact
+                <Link to="/contact">
+                  Contact
+                </Link>
+
 
               </div>
               <div>
-                About
+                <Link to="/about">
+                  About
+                </Link>
+
               </div>
             </div>
           </div>
