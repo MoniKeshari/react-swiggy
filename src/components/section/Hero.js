@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import CarouselComponentclass from "../../style/carousel.module.scss";
 
@@ -8,8 +8,10 @@ import CardCarouselComponent from "../carouselcomponent/CardCaraousel";
 import CardDataComponent from "../cardcomponent/CardComponent";
 import CardWrapper from "../carouselcomponent/CardWrapper";
 import Strapper from "../strappercomponent/Strapper";
+import strapperdata from "../../strapper";
+import locality_json from "../../locality";
 const HeroSection = () => {
- 
+
     return (
         <div>
             <div className={`continer-fluid ${cardwrapperclass.container_fluid}`}>
@@ -17,25 +19,36 @@ const HeroSection = () => {
                     <CardWrapper />
                 </div>
             </div>
-            <div className="container-fluid mt-5">
-                <div className="container">
+            <div className="container mt-4 mb-3">
+                <div className={CarouselComponentclass.carousel_data_}>
+                    <CarouselComponent />
                 </div>
-                <div className="container mt-3">
-                    <div className={CarouselComponentclass.carousel_data_}>
-                        <CarouselComponent />
-                    </div>
-
-
-                    <div className={CarouselComponentclass.wrapper_card}>
-                        <CardCarouselComponent />
-                    </div>
-
-                    <CardDataComponent />
-
-                </div>
+                <div className={CarouselComponentclass.divider_}></div>
             </div>
-            <div className="container">
-                <Strapper />
+          
+            <div className="container mt-3">
+                <div className={CarouselComponentclass.wrapper_card}>
+                    <CardCarouselComponent />
+                </div>
+                <div className={`${CarouselComponentclass.divider_} mt-4`}></div>
+            </div>
+          
+            <div className="container mt-3 mb-3">
+                <CardDataComponent />
+                <div className={CarouselComponentclass.divider_}></div>
+            </div>
+            
+            <div className="container mb-3">
+                <Strapper strapperdata={strapperdata} heading="Restaurant Chains Near Me"/>
+                <div className={`${CarouselComponentclass.divider_} mt-4`}></div>
+            </div>
+
+            <div className="container mb-3">
+                <Strapper strapperdata={locality_json} heading="Explore localities in and around Delhi"/>
+                <div className={`${CarouselComponentclass.divider_} mt-4`}></div>
+            </div>
+            <div className="container mb-5">
+                <Strapper strapperdata={strapperdata} heading="More Food Options Near Me"/>
             </div>
         </div>
 

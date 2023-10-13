@@ -36,35 +36,43 @@ const CardCarouselComponent = () => {
     };
 
     const mobileText = apiResponse[1]?.card?.card?.title;
-    return apiResponse.length === 0 ? "Loading..." : (<>
-        {!isMobile ? (<Carousel
-            swipeable={true}
-            draggable={true}
-            responsive={responsive}
-            className={styles.carousel_card_}>
-            {apiResponse[1]?.card?.card?.imageGridCards?.info?.map((item) => (
-                <div key={item.id} className={styles.card_wrapper_data}>
-                    <CardComponent data={item}
-                        cardWrapperClass={styles.carousel_card_wrapper_tag}
-                        cardContentTag={styles.cardContentDiv}
-                        cardTitle={styles.cardTitle_title}
-                        cardContent={styles.cardContent}
-                        cardImageTag={styles.image_div}
-                    />
+    return apiResponse.length === 0 ? "Loading..." : (
+        <>
+            <div className='row'>
+                <div className='col-lg-12 col-md-12 col-sm-12'>
+                    <div className={styles.to_res}>
+                        <h2>
+                        Top restaurant chains in Delhi
+                        </h2>
+                    </div>
                 </div>
 
-            ))
-            }
-        </Carousel>
-        ) : (`"api is not coming as a desktop so" ${mobileText}`)}
-    </>
+            </div>
+            <div className={styles.card_wrapp}>
+                {!isMobile ? (<Carousel
+                    swipeable={true}
+                    draggable={true}
+                    responsive={responsive}
+                    className={styles.carousel_card_}>
+                    {apiResponse[1]?.card?.card?.imageGridCards?.info?.map((item) => (
+                        <div key={item.id} className={styles.card_wrapper_data}>
+                            <CardComponent data={item}
+                                cardWrapperClass={styles.carousel_card_wrapper_tag}
+                                cardContentTag={styles.cardContentDiv}
+                                cardTitle={styles.cardTitle_title}
+                                cardContent={styles.cardContent}
+                                cardImageTag={styles.image_div}
+                            />
+                        </div>
 
+                    ))
+                    }
+                </Carousel>
+                ) : (`"api is not coming as a desktop so" ${mobileText}`)}
+            </div>
+        </>
 
     )
-
-
-
-
 
 }
 

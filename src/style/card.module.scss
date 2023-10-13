@@ -2,19 +2,22 @@
     border-radius: 12px;
     margin-bottom: 24px;
     transition: .5s ease-in-out;
+
     .cardImageDiv {
         border-radius: 12px;
         overflow: hidden;
+
         img {
             width: 100%;
             border-radius: 12px;
             transition: .5s ease-in-out;
         }
+
         // img:hover {
         //     transform: scale(1.1);
         // }
     }
-  
+
     .cardContentDiv {
         width: 92%;
         margin: -41px auto 0;
@@ -24,7 +27,7 @@
         position: relative;
         z-index: 0;
         background-color: #fff;
-       
+
         .cardTitle {
             font-weight: 600;
             font-size: 16px;
@@ -32,6 +35,7 @@
             color: #000;
             padding: 0 19px;
         }
+
         .cardContent {
             font-weight: 500;
             font-size: 16px;
@@ -48,6 +52,23 @@
         }
     }
 }
-.carousel_card{
+
+.carousel_card {
     display: flex;
+}
+
+.top_res {
+    padding: 0 10px;
+    font-family: "Basis Grotesque Pro";
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+    color: rgba(2, 6, 12, 0.92);
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    overflow-wrap: break-word;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }

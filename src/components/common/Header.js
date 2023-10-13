@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "../../style/header.module.scss";
 import imgheader from "../../assets/productImg/swiggy.svg"
 import InputBaseField from "../customcomponent/Input";
@@ -6,8 +6,22 @@ import searchIcon from "../../assets/productImg/search.png";
 import ButtonComponent from "../customcomponent/Button";
 import { Link } from 'react-router-dom';
 const NavBar = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={`container-fluid ${style.conatiner_wrapper}`}>
+    <div className={`container-fluid ${style.conatiner_wrapper} ${scrollPosition? style.scrollcheck: ""}`} >
       <div className="container">
         <div className={style.main_class}>
           <div className={`row ${style.nav_div}`}>

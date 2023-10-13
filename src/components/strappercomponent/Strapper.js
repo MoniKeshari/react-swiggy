@@ -1,14 +1,13 @@
 import React from 'react'
 import style from "../../style/strapper.module.scss";
-import strapperdata from '../../strapper';
-const Strapper = () => {
+const Strapper = ({strapperdata, heading}) => {
     return (
-        < div className={style.main_container_wrapper}>
+        <div className={style.main_container_wrapper}>
             <div className='row'>
                 <div className='col-sm-12 col-lg-12 col-md-12'>
                     <div className={style.head_content}>
                         <h1>
-                            Restaurant Chains Near Me
+                          {heading}
                         </h1>
                     </div>
 
