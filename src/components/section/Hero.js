@@ -8,8 +8,8 @@ import CardCarouselComponent from "../carouselcomponent/CardCaraousel";
 import CardDataComponent from "../cardcomponent/CardComponent";
 import CardWrapper from "../carouselcomponent/CardWrapper";
 import Strapper from "../strappercomponent/Strapper";
-import strapperdata from "../../strapper";
-import locality_json from "../../locality";
+import strapperdata from "../../json/strapper";
+import locality_json from "../../json/locality";
 const HeroSection = () => {
 
     return (

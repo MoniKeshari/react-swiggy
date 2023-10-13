@@ -1,21 +1,12 @@
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from "../../style/carousel.module.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CardComponent from '../cardcomponent/Card';
-import { base_url_card } from '../../utils/constants';
 import { isMobile } from '../../utils/custom';
+import useApiCall from '../../utils/useApiCall';
 const CardCarouselComponent = () => {
-    const [apiResponse, setapiResponse] = useState([])
-    useEffect(() => {
-        fetchData()
-    }, [])
-    const fetchData = async () => {
-        const apiReq = await fetch(base_url_card)
-        const response = await apiReq.json();
-        setapiResponse(response.data.cards)
-    }
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -34,8 +25,8 @@ const CardCarouselComponent = () => {
             items: 2
         }
     };
-
-    const mobileText = apiResponse[1]?.card?.card?.title;
+    const apiResponse=useApiCall()
+    const mobileText = apiResponse?.card?.card?.title;
     return apiResponse.length === 0 ? "Loading..." : (
         <>
             <div className='row'>
@@ -54,7 +45,7 @@ const CardCarouselComponent = () => {
                     draggable={true}
                     responsive={responsive}
                     className={styles.carousel_card_}>
-                    {apiResponse[1]?.card?.card?.imageGridCards?.info?.map((item) => (
+                    {apiResponse?.card?.card?.imageGridCards?.info?.map((item) => (
                         <div key={item.id} className={styles.card_wrapper_data}>
                             <CardComponent data={item}
                                 cardWrapperClass={styles.carousel_card_wrapper_tag}

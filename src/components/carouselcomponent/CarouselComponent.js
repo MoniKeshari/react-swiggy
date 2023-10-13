@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "../../style/carousel.module.scss";
 import CarouselCard from "../carouselcomponent/CarouselCard";
-import data from "../../apiResponse";
+import data from "../../json/apiResponse";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
