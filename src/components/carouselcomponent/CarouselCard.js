@@ -9,8 +9,6 @@ const CarouselCard = ({ data }) => {
             </div>
         </div>
 
-
-
     );
 
 }

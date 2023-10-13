@@ -1,17 +1,10 @@
 
-
-
-
-
-
-
 import React, { useEffect, useState } from 'react'
 import styles from "../../style/carousel.module.scss";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CardComponent from '../cardcomponent/Card';
 import { base_url_card } from '../../utils/constants';
-
 const CardCarouselComponent = () => {
     const [apiResponse, setapiResponse] = useState([])
     useEffect(() => {
