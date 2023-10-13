@@ -1,25 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import style from "../../style/header.module.scss";
 import imgheader from "../../assets/productImg/swiggy.svg"
 import InputBaseField from "../customcomponent/Input";
 import searchIcon from "../../assets/productImg/search.png";
 import ButtonComponent from "../customcomponent/Button";
 import { Link } from 'react-router-dom';
+import useScreen from "../../utils/useScreen";
 const NavBar = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
+  const scrollPosition= useScreen();
   return (
     <div className={`container-fluid ${style.conatiner_wrapper} ${scrollPosition? style.scrollcheck: ""}`} >
       <div className="container">
@@ -42,7 +30,6 @@ const NavBar = () => {
                   searchClassName={style.searchicon} buttonclassname={style.button_custom_text} />
               </div>
             </div>
-
             <div className="col-md-2 col-lg-2 col-sm-12">
               <div className={style.list_item}>
                 <div>
@@ -56,8 +43,6 @@ const NavBar = () => {
                     About
                   </Link>
                 </div>
-
-
               </div>
               <div>
               </div>
