@@ -5,6 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CardComponent from '../cardcomponent/Card';
 import { base_url_card } from '../../utils/constants';
+import { isMobile } from '../../utils/custom';
 const CardCarouselComponent = () => {
     const [apiResponse, setapiResponse] = useState([])
     useEffect(() => {
@@ -33,19 +34,17 @@ const CardCarouselComponent = () => {
             items: 2
         }
     };
-    return (
 
-        <Carousel
+    const mobileText = apiResponse[1]?.card?.card?.title;
+    return apiResponse.length === 0 ? "Loading..." : (<>
+        {!isMobile ? (<Carousel
             swipeable={true}
             draggable={true}
             responsive={responsive}
             className={styles.carousel_card_}>
-
-            {apiResponse.length > 0 && apiResponse[1]?.card?.card?.imageGridCards?.info?.map((item, index) => (
-
-
-                <div key={index} className={styles.card_wrapper_data}>
-                    <CardComponent key={item.id} data={item}
+            {apiResponse[1]?.card?.card?.imageGridCards?.info?.map((item) => (
+                <div key={item.id} className={styles.card_wrapper_data}>
+                    <CardComponent data={item}
                         cardWrapperClass={styles.carousel_card_wrapper_tag}
                         cardContentTag={styles.cardContentDiv}
                         cardTitle={styles.cardTitle_title}
@@ -56,15 +55,17 @@ const CardCarouselComponent = () => {
 
             ))
             }
-
-
-
         </Carousel>
-
-
+        ) : (`"api is not coming as a desktop so" ${mobileText}`)}
+    </>
 
 
     )
+
+
+
+
+
 }
 
 export default CardCarouselComponent;

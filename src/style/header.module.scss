@@ -1,12 +1,13 @@
 .conatiner_wrapper {
-    background-color: rgb(53, 40, 15);
-    // box-shadow: 0 1px 12px #2c6b34;
+    background: linear-gradient(0deg, rgb(255, 255, 255));
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid rgb(202, 198, 198);
 }
-
-
+.scrolled {
+    background: black; /* Change this to the color you want when scrolling */
+  }
 
 .main_class {
     .nav_div {
@@ -19,8 +20,8 @@
     .list_item {
         display: flex;
         justify-content: initial;
-        gap:20px;
-        
+        gap: 20px;
+
 
         ul {
             display: flex;
@@ -30,7 +31,7 @@
 
         a {
             text-decoration: none;
-            color: white;
+            color: #333;
         }
     }
 
@@ -56,11 +57,11 @@
         flex-direction: row;
         align-items: center;
         gap: 20px;
-        color: white;
+        color: #333;
 
         a {
             text-decoration: none;
-            color: white;
+            color: #333;
         }
     }
 }
@@ -108,10 +109,11 @@
     align-items: center;
 }
 
+
 .inputfield:focus {
     border-right: 0;
 
-    border: 2px solid white;
+    border: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     outline: none;
 }
 
@@ -127,11 +129,13 @@
 
 
 }
-@media screen  and (max-width:767px){
-.nav_div{
-    padding: 0;
-}
-    .button_custom_text{
+
+@media screen and (max-width:767px) {
+    .nav_div {
+        padding: 0;
+    }
+
+    .button_custom_text {
         padding: 0;
 
     }

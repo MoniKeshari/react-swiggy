@@ -1,69 +1,43 @@
 import React, { useEffect, useState } from "react";
-import style from "../../style/card.module.scss";
-import styles from "../../style/carousel.module.scss";
 
-import ShimmerComponent from "../shimmer/Shimmer";
-import CardComponent from "../cardcomponent/Card";
-import { base_url_card } from "../../utils/constants"
+import CarouselComponentclass from "../../style/carousel.module.scss";
+
+import cardwrapperclass from "../../style/wrapper.module.scss";
 import CarouselComponent from "../carouselcomponent/CarouselComponent";
 import CardCarouselComponent from "../carouselcomponent/CardCaraousel";
+import CardDataComponent from "../cardcomponent/CardComponent";
+import CardWrapper from "../carouselcomponent/CardWrapper";
+import Strapper from "../strappercomponent/Strapper";
 const HeroSection = () => {
-    const [apiResponse, setapiResponse] = useState([])
-    useEffect(() => {
-        fetchData()
-    }, [])
-    const fetchData = async () => {
-        const apiReq = await fetch(base_url_card)
-        const response = await apiReq.json();
-        setapiResponse(response.data.cards)
-    }
-
+ 
     return (
-        <>
+        <div>
+            <div className={`continer-fluid ${cardwrapperclass.container_fluid}`}>
+                <div className={`container ${cardwrapperclass.container_div}`}>
+                    <CardWrapper />
+                </div>
+            </div>
             <div className="container-fluid mt-5">
                 <div className="container">
                 </div>
                 <div className="container mt-3">
-                    <div className={styles.carousel_data_}>
+                    <div className={CarouselComponentclass.carousel_data_}>
                         <CarouselComponent />
                     </div>
 
 
-                    <div className={styles.wrapper_card}>
+                    <div className={CarouselComponentclass.wrapper_card}>
                         <CardCarouselComponent />
                     </div>
 
-                    {
-                        apiResponse && apiResponse.length > 0 ?
-                            (
-                                <>
-                                    <div className="row">
-                                        {apiResponse[1]?.card?.card?.imageGridCards?.info?.map((item, index) => (
-                                            <div className="col-md-3 col-sm-12" key={index}>
-
-                                                <CardComponent
-                                                    key={item.id}
-                                                    cardWrapperClass={style.card_wrapper}
-                                                    cardImageTag={style.cardImageDiv}
-                                                    cardContentTag={style.cardContentDiv}
-                                                    cardTitle={style.cardTitle}
-                                                    cardContent={style.cardContent}
-                                                    data={item}
-                                                />
-                                            </div>
-                                        ))}
-                                    </div>
-                                </>
-
-                            )
-
-                            :
-                            <ShimmerComponent />}
+                    <CardDataComponent />
 
                 </div>
             </div>
-
-        </>
+            <div className="container">
+                <Strapper />
+            </div>
+        </div>
 
 
     );

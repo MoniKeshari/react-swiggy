@@ -24,7 +24,7 @@ const CarouselComponent = () => {
             items: 2
         }
     };
-    return (
+    return data.length === 0 ? "Loading...." : (
 
         <Carousel
             swipeable={true}

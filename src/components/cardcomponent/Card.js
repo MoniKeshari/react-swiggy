@@ -1,7 +1,7 @@
 
 import React from "react";
 import { base_url_img } from "../../utils/constants"
-const CardComponent = ({
+const CardData = ({
     cardWrapperClass,
     cardImageTag,
     cardContentTag,
@@ -26,4 +26,4 @@ const CardComponent = ({
     );
 };
 
-export default CardComponent;
+export default CardData;
