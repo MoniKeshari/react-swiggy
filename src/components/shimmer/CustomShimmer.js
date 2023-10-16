@@ -1,6 +1,5 @@
 import React from 'react';
 import style from "../../style/shimmer.module.scss";
-
 const CustomComponent = () => {
   return (
     <>

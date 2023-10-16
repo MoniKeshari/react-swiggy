@@ -6,9 +6,7 @@ const InputBaseField = (props) => {
     <div className={style.input_wrapper}>
         {label && (<label className={labelclassname}>{label}</label>)}
         <input {...props}  className= {className} />
-      
     </div>
   )
 }
-
 export default InputBaseField

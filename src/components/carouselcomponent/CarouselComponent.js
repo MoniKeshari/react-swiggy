@@ -4,7 +4,6 @@ import CarouselCard from "../carouselcomponent/CarouselCard";
 import data from "../../json/apiResponse";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 const CarouselComponent = () => {
     const responsive = {
         superLargeDesktop: {
@@ -32,9 +31,7 @@ const CarouselComponent = () => {
                         <h2>
                         Moni, what's on your mind?
                         </h2>
-                   
                     </div>
-
                 </div>
             </div>
             <Carousel

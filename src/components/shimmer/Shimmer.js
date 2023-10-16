@@ -1,6 +1,5 @@
 import React from 'react'
 import CustomComponent from './CustomShimmer'
-
 const ShimmerComponent = () => {
   return (
     <div className='row'>
@@ -43,5 +42,4 @@ const ShimmerComponent = () => {
     </div>
   )
 }
-
 export default ShimmerComponent

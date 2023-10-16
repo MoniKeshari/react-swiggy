@@ -29,8 +29,6 @@ const Strapper = ({ strapperdata, heading }) => {
 
             </div>
         </div>
-
-
     )
 }
 

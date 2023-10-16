@@ -48,9 +48,6 @@ const HeroSection = () => {
                 <Strapper strapperdata={strapperdata} heading="More Food Options Near Me" />
             </div>
         </div>
-
-
     );
 };
-
 export default HeroSection;

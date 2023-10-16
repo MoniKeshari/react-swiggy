@@ -94,7 +94,6 @@ function FooterComponent() {
                     </div>
 
                 </div>
-               
             </div>
             <div className={`${style.second_footer} row`}>
                     <div className='col-md-6 col-lg-6 col-xl-6 col-sm-12 col-xs-12 align-items-end'>

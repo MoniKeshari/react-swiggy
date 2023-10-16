@@ -19,7 +19,6 @@ const CardDataComponent = () => {
                 </div>
 
             </div>
-
             <div className="row">
                 {apiResponse?.card?.card?.imageGridCards?.info?.map((item, index) => (
                     <div className="col-md-3 col-sm-12" key={index}>
@@ -36,8 +35,6 @@ const CardDataComponent = () => {
                 ))}
             </div>
         </>
-
-
     )
 }
 

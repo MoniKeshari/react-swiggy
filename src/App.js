@@ -9,7 +9,6 @@ import RestaurantMenu from './components/Pages/RestaureantMenu';
 import 'react-multi-carousel/lib/styles.css';
 import { lazy, Suspense } from 'react';
 function App() {
-
   return (
     <>
       <NavBar />
@@ -18,14 +17,10 @@ function App() {
     </>
   );
 }
-
 export default App;
 const Grocery=lazy(()=>import("./components/grocerycomponent/Groceory"))
 const About=lazy(()=>import("./components/Pages/About"))
-
 const Contact=lazy(()=>import("./components/Pages/Contact"))
-
-
 export const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -57,7 +52,5 @@ export const appRouter = createBrowserRouter([
     ],
     errorElement: <ErrorComponent />
   },
-
-
 
 ])

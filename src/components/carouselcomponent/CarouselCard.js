@@ -1,6 +1,5 @@
 import React from 'react'
 import style from "../../style/carousel.module.scss";
-
 const CarouselCard = ({ data }) => {
     return (
         <div>
@@ -8,11 +7,8 @@ const CarouselCard = ({ data }) => {
                 <img src={data.img} alt="img" />
             </div>
         </div>
-
     );
-
 }
-
 export default CarouselCard
 
 
