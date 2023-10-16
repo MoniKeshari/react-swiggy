@@ -37,10 +37,15 @@ const NavBar = () => {
                     Contact
                   </Link>
                 </div>
-
+               
                 <div>
                   <Link to="/about">
                     About
+                  </Link>
+                </div>
+                <div>
+                  <Link to="/grocery">
+                  grocery
                   </Link>
                 </div>
               </div>
