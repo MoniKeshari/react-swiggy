@@ -26,6 +26,7 @@ const CardCarouselComponent = () => {
         }
     };
     const apiResponse=useApiCall()
+    console.log(apiResponse, "apiResponse");
     const mobileText = apiResponse?.card?.card?.title;
     return apiResponse.length === 0 ? "Loading..." : (
         <>

@@ -10,6 +10,7 @@ const useApiCall = () => {
     const fetchData = async () => {
         const apiReq = await fetch(base_url_card);
         const response = await apiReq.json();
+        console.log(response, "response");
         setCardData(response.data.cards[1]);
 
     };
