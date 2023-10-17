@@ -8,6 +8,7 @@ import CardWrapper from "../carouselcomponent/CardWrapper";
 import Strapper from "../strappercomponent/Strapper";
 import strapperdata from "../../json/strapper";
 import locality_json from "../../json/locality";
+import Toprestorentcard from "../cardcomponent/Toprestorentcard";
 const HeroSection = () => {
     return (
         <div>
@@ -34,7 +35,11 @@ const HeroSection = () => {
                 <CardDataComponent />
                 <div className={CarouselComponentclass.divider_}></div>
             </div>
+            <div className="container mt-3 mb-3">
+                <Toprestorentcard />
+                <div className={CarouselComponentclass.divider_}></div>
 
+            </div>
             <div className="container mb-3">
                 <Strapper strapperdata={strapperdata} heading="Restaurant Chains Near Me" />
                 <div className={`${CarouselComponentclass.divider_} mt-4`}></div>

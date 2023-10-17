@@ -10,41 +10,56 @@ const data=[
     {
     id:1,
     img:Burger,
+    type:false
 
 },
 {
     id:2,
     img:Biryani_2,
+    type:true
+
 
 },
 {
     id:3,
     img:Chinese,
+    type:false
+
 
 },
 {
     id:4,
     img:Chole_Bature,
+    type:true
+
 
 },
 {
     id:5,
     img:Desserts_2,
+    type:false
+
 
 },
 {
     id:6,
     img:North_Indian_4,
+    type:true
+
 
 },
 {
     id:7,
     img:Pasta,
+    type:false
+
 
 },
 {
     id:8,
     img:Rolls,
+    type:true
+
 
 },
 

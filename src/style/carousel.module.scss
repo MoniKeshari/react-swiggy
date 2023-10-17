@@ -1,14 +1,21 @@
 .img_tag {
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    overflow: hidden;
     img {
         width: 144px;
         height: 118px;
     }
 }
-.wrapper_card{
+
+.wrapper_card {
     margin-top: 20px;
 }
-.to_res{
+
+.to_res {
     padding: 0 10px;
     font-family: "Basis Grotesque Pro";
     font-size: 24px;
@@ -24,14 +31,16 @@
     -webkit-box-orient: vertical;
 }
 
-.divider_{
+.divider_ {
     border-bottom: 1px solid rgb(240, 240, 245);
 }
-.carousel_wrapper{
+
+.carousel_wrapper {
     display: flex;
     justify-content: center;
 }
-.content_data{
+
+.content_data {
     padding: 0 10px;
     font-family: "Basis Grotesque Pro";
     font-size: 24px;
@@ -47,37 +56,41 @@
     -webkit-box-orient: vertical;
 }
 
-.react-multiple-carousel__arrow--right{
+.react-multiple-carousel__arrow--right {
     position: absolute;
-    top:34px;
-    right:100px
+    top: 34px;
+    right: 100px
 }
-.carousel_card_wrapper_tag{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+.carousel_card_wrapper_tag {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    border-radius: 5px; 
-    width:100%;
+    border-radius: 5px;
+    width: 100%;
     border-color: black;
-    height:auto;
+    height: auto;
     margin-left: 0 !important;
     border-radius: 12px;
 }
 
-.card_wrapper_data{
-padding: 22px 10px;
+.card_wrapper_data {
+    padding: 22px 10px;
 }
-.image_div{
-    width: 100%; 
+
+.image_div {
+    width: 100%;
     min-height: 300px;
     overflow: hidden;
+
     img {
-        max-width: 100%; 
-        max-height: 100%; 
-        display: block; 
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
         margin: 0 auto;
         vertical-align: middle;
-      }
+    }
 }
+
 .cardContentDiv {
     width: 92%;
     margin: -41px auto 0;
@@ -87,7 +100,7 @@ padding: 22px 10px;
     position: relative;
     z-index: 0;
     background-color: #fff;
-   
+
     .cardTitle {
         font-weight: 600;
         font-size: 16px;
@@ -95,6 +108,7 @@ padding: 22px 10px;
         color: #000;
         padding: 0 19px;
     }
+
     .cardContent {
         font-weight: 500;
         font-size: 16px;
