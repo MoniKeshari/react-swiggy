@@ -13,15 +13,15 @@ export const withPromotedWrapper = (CarouselCard) => {
     return ((props) => {
         return (
             <>
-               
-                        <h6>
-                            Promoted data
-                        </h6>
-                   
+
+                <h6>
+                    Promoted data
+                </h6>
+
                 <div className='row'>
-                   
-                        <CarouselCard  {...props} />
-                    
+
+                    <CarouselCard  {...props} />
+
                 </div>
             </>
         )
