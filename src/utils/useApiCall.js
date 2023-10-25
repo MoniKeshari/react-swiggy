@@ -2,19 +2,16 @@ import { useEffect } from "react";
 import { base_url_card } from "./constants";
 import { useDispatch, useSelector } from "react-redux";
 import { setCardData } from "../reduxtoolkit/slice/homeslice";
-import { useParams } from "react-router";
-
-const useApiCall = () => {
-   const{resId}=useParams();
+const useApiCall = (resId) => {
     const dispatch = useDispatch();
     const { carddata } = useSelector((state) => state.inputFieldSlice)
     useEffect(() => {
         fetchData(resId);
-    }, []);
+    }, [resId]);
 
     const fetchData = async (resId) => {
         console.log(resId, "resIddata");
-        const apiReq = await fetch(`${base_url_card}&id=${resId} `);
+        const apiReq = await fetch(`${base_url_card}/${resId} `);
         console.log(apiReq, "apiReq");
         const response = await apiReq.json();
         console.log(response, "response");

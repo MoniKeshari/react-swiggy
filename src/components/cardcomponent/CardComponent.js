@@ -28,7 +28,7 @@ const CardDataComponent = () => {
                 {filterData.length === 0 ? <h1 style={{ textAlign: "center" }}>not available</h1> : filterData?.map((item) => {
                     return (
                         <div className="col-md-3 col-sm-12" key={item.id}>
-                            <Link to={"/restaurants/"+item.id} className={style.link_href}>
+                            <Link to={`/restaurants/${item.action.text}`} className={style.link_href}>
                             <CardComponent
                                 key={item.id}
                                 cardWrapperClass={style.card_wrapper}
