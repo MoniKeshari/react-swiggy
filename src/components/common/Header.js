@@ -6,10 +6,19 @@ import searchIcon from "../../assets/productImg/search.png";
 import ButtonComponent from "../customcomponent/Button";
 import { Link } from 'react-router-dom';
 import useScreen from "../../utils/useScreen";
+import { useDispatch, useSelector } from "react-redux";
+import { setInputValue } from "../../reduxtoolkit/slice/homeslice";
 const NavBar = () => {
-  const scrollPosition= useScreen();
+  const scrollPosition = useScreen();
+  const dispatch = useDispatch();
+  const { inputsearch } = useSelector((state) => state.inputFieldSlice);
+  console.log(inputsearch, "inputsearch");
+  const searchhandleClick = (e) => {
+    dispatch(setInputValue(e.target.value))
+  }
+
   return (
-    <div className={`container-fluid ${style.conatiner_wrapper} ${scrollPosition? style.scrollcheck: ""}`} >
+    <div className={`container-fluid ${style.conatiner_wrapper} ${scrollPosition ? style.scrollcheck : ""}`} >
       <div className="container">
         <div className={style.main_class}>
           <div className={`row ${style.nav_div}`}>
@@ -25,6 +34,8 @@ const NavBar = () => {
                   className={style.inputfield}
                   labelclassname={style.forlabel}
                   placeholder="Search restaurants and food here"
+                  inputsearch={inputsearch}
+                  searchhandleClick={searchhandleClick}
                 />
                 <ButtonComponent searchIcon={searchIcon}
                   searchClassName={style.searchicon} buttonclassname={style.button_custom_text} />
@@ -37,7 +48,7 @@ const NavBar = () => {
                     Contact
                   </Link>
                 </div>
-               
+
                 <div>
                   <Link to="/about">
                     About
@@ -45,7 +56,7 @@ const NavBar = () => {
                 </div>
                 <div>
                   <Link to="/grocery">
-                  grocery
+                    grocery
                   </Link>
                 </div>
               </div>

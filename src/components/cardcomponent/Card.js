@@ -8,7 +8,9 @@ const CardData = ({
     cardContent,
     data,
 }) => {
+
     const { imageId, accessibility, id } = data;
+    console.log(accessibility, "accessibility");
     return (
         <>
 

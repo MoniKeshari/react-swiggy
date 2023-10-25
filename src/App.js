@@ -5,16 +5,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HeroSection from './components/section/Hero';
 import { createBrowserRouter, Outlet } from 'react-router-dom';
 import ErrorComponent from './components/common/Error';
-import RestaurantMenu from './components/Pages/RestaureantMenu';
 import 'react-multi-carousel/lib/styles.css';
 import { lazy, Suspense } from 'react';
+import { Provider } from 'react-redux';
+import { store } from './reduxtoolkit/store';
+import RestorentMenuCard from './components/cardcomponent/RestorentMenuCard';
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <NavBar />
       <Outlet />
       <FooterComponent />
-    </>
+    </Provider>
   );
 }
 export default App;
@@ -45,8 +47,8 @@ export const appRouter = createBrowserRouter([
         element:<Suspense fallback={<><h1>loading.....</h1></>}> <Grocery /></Suspense>
       },
       {
-        path: "/restaurants/:res_id",
-        element: <RestaurantMenu />
+        path: "/restaurants/:resId",
+        element: <RestorentMenuCard />
 
       },
     ],
